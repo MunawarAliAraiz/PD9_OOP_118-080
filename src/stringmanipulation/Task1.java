@@ -25,6 +25,24 @@ public class Task1 {
        return j;
     }
     
+    
+    public static boolean findSubString(String s,String sub)
+    {
+        boolean flag=false;
+        String[] temp = s.split(" ");
+        int size=temp.length;
+        
+        for(int i=0;i<size;i++)
+        {
+            if (temp[i].equals(sub) ){
+                flag=true;
+                break;
+            }
+        }
+        
+        return flag;
+    }
+    
     public static int vowelCounter(String s)
     {
        int j = 0;
