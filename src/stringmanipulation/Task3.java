@@ -10,6 +10,21 @@ package stringmanipulation;
  * @author Munawar Ali
  */
 public class Task3 {
+    
+    public static String removeInteger(String s)
+    {
+        s = ridMultipleBlank(s);
+        String a = "";
+        for(int i=0; i<s.length(); i++)
+        {
+            if(!(s.charAt(i) >= '0' && s.charAt(i) <= '9'))
+            {
+                a += s.charAt(i);
+            }
+        }
+        return a;
+    }
+    
     public static String ridMultipleBlank(String s)
     {
         String a = "";

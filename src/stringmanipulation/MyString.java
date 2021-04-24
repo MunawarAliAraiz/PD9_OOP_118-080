@@ -11,14 +11,11 @@ package stringmanipulation;
  */
 public class MyString {
     
-    boolean numericValidator(String s,int size){
+    public static boolean numericValidator(String s){
         
-        boolean flag=true;
-        int length=s.length();
+        boolean flag = false;
         
-        if(length==size){
-            
-            for(int i=0;i<length;i++)
+            for(int i=0;i<s.length();i++)
             {
                 if(!(s.charAt(i)>='0' && s.charAt(i)<='9')){
                 
@@ -27,14 +24,10 @@ public class MyString {
                 }
             }
         
-        }else{
-            flag=false;
-        }
-        
         return flag;
     }
     
-    boolean alphabetValidator(String s){
+    public static boolean alphabetValidator(String s){
         
         boolean flag=false;
         int length=s.length();
@@ -46,12 +39,10 @@ public class MyString {
               flag=false;
              }
          }
-        
-        
         return flag;
     }
     
-    boolean isPalindrome(String s){
+    public static boolean isPalindrome(String s){
         
         boolean flag=true;
         int length=s.length();
@@ -69,5 +60,38 @@ public class MyString {
         return flag;
     }
     
+    public static String toLower(String s)
+    {
+        String ss = "";
+        for(int i=0; i<s.length(); i++)
+        {
+            if((int)s.charAt(i) >= 65 && (int)s.charAt(i) <= 90)
+            {
+                int a = (int)s.charAt(i)+32;
+                char b = (char)a;
+                ss = ss + b;
+            }
+            else
+                ss = ss + s.charAt(i);
+        }
+        return ss;
+    }
+    
+    public static String toUpper(String s)
+    {
+        String ss = "";
+        for(int i=0; i<s.length(); i++)
+        {
+            if((int)s.charAt(i) >= 97 && (int)s.charAt(i) <= 122)
+            {
+                int a = (int)s.charAt(i)-32;
+                char b = (char)a;
+                ss = ss + b;
+            }
+            else
+                ss = ss + s.charAt(i);
+        }
+        return ss;
+    }
 }
 

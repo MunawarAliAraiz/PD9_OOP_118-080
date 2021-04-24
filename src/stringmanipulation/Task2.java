@@ -12,17 +12,6 @@ import java.util.Scanner;
  */
 public class Task2 {
     
-    public static void main(String[] args) {
-        // TODO code application logic here
-        Scanner obj=new Scanner(System.in);
-        
-        System.out.println("Please Enter a sentence.");
-        String s=obj.nextLine();
-        
-        System.out.println("Your sentence printed verticaly is:");
-        System.out.print(displayVertical(s));
-    }
-    
     static String displayVertical(String s){
         
         String temp="";
